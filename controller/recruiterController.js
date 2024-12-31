@@ -89,7 +89,10 @@ export const recruiterRegistrationController = async (request, response) => {
             contact: contact,
             address: address
         }
-        const mailContent = `Hello ${email},<br>This is a verification mail by Faculty Recruitment System. You Needs to verify yourself by clicking on the below link.<br><a href='http://localhost:3001/recruiter/verifyEmail?email=${email}'>Click Here To Verify</a>`;
+        // const mailContent = `Hello ${email},<br>This is a verification mail by Faculty Recruitment System. You Needs to verify yourself by clicking on the below link.<br><a href='http://localhost:3001/recruiter/verifyEmail?email=${email}'>Click Here To Verify</a>`;
+
+        const mailContent = `Hello ${email},<br>This is a verification mail by Faculty Recruitment System. You Needs to verify yourself by clicking on the below link.<br><a href='https://backend-b4eu.onrender.com/recruiter/verifyEmail?email=${email}'>Click Here To Verify</a>`;
+
 
         mailer.mailer(mailContent, email, async (info) => {
             if (info) {
