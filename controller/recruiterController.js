@@ -16,7 +16,10 @@ export const recruiterVerifyEmailController = async (request, response) => {
     const updateResult = await recruiterSchema.updateOne({ email: email }, updateStatus);
     console.log("Update Result : ", updateResult);
     // response.render("recruiterLogin", { message: "Email Verified | Admin verification takes 24 Hours" });
-    response.redirect("http://localhost:3000/recruiterLogin?message=Email Verified | Admin verification takes 24 Hours");
+
+    // response.redirect("http://localhost:3000/recruiterLogin?message=Email Verified | Admin verification takes 24 Hours");
+
+    response.redirect("https://frontend-x4tk.onrender.com/recruiterLogin?message=Email Verified | Admin verification takes 24 Hours");
 }
 
 // export const recruiterLoginController = async(request,response)=>{
