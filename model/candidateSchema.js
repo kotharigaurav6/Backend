@@ -3,7 +3,8 @@ import url from "../database/connection.js";
 mongoose.connect(url,{
     useNewUrlParser:true,
     useUnifiedTopology:true,
-    serverSelectionTimeoutMS:5000,  
+    serverSelectionTimeoutMS:1200000, 
+    maxPoolSize: 10, // Adjust as needed  
 });
 
 const candidateSchema = mongoose.Schema({
